@@ -23,7 +23,7 @@ function App() {
     <displayContext.Provider value={contextValue}>
       <div id="drum-machine" className="flex flex-wrap gap-4 border-[#f8bbd0] border-6 p-8 w-fit ">
         <DrumPadBox></DrumPadBox>
-        <div className="w-[326px] flex flex-col items-center justify-evenly">
+        <div className="w-[326px] flex flex-col items-center justify-evenly min-h-[260px]">
         <PowerButton></PowerButton>
           <p id="display" className="bg-[#e91e63] flex flex-col justify-around items-center w-52 p-2 font-bold h-13">{disp}</p>
           <input type="range" min="0" max="1" step="0.01" value={volume} onChange={handleVolumeChange} className="slider" disabled={!checked} />
