@@ -21,7 +21,7 @@ function App() {
   
   return (
     <displayContext.Provider value={contextValue}>
-      <div id="drum-machine" className="flex flex-wrap gap-4 border-[#f8bbd0] border-6 p-8 w-fit ">
+      <div id="drum-machine" className="flex flex-wrap gap-4 border-[#f8bbd0] border-6 p-8 w-fit scale-85 md:scale-100">
         <DrumPadBox></DrumPadBox>
         <div className="w-[326px] flex flex-col items-center justify-evenly min-h-[260px]">
         <PowerButton></PowerButton>
