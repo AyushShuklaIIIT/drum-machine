@@ -15,8 +15,10 @@ const DrumPadBox = () => {
         C: "Closed HH"
     }
 
-    const {setDisp, volume} = useContext(displayContext);
+    const {setDisp, volume, checked} = useContext(displayContext);
     const handleKeyDown = (e) => {
+        if(!checked) return;
+
         const key = e.key.toUpperCase();
         const audio = document.getElementById(key);
         if (audio) {
@@ -34,7 +36,7 @@ const DrumPadBox = () => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         }
-    }, [])
+    }, [checked])
 
     return (
         <div className="drum-pad-box w-[326px] flex flex-wrap gap-3">
