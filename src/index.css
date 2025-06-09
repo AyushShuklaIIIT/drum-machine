@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+.drum-pad {
+    @apply w-25 h-20 flex justify-center items-center font-bold bg-[#f8bbd0] rounded-lg shadow-md/75 shadow-gray-900 active:shadow-none active:bg-[#d81b60] disabled:cursor-not-allowed outline-none
+}
+
+.drum-pad.active {
+    @apply bg-[#d81b60] shadow-none
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 256px;
+    height: 6px;
+    background: #d81b60;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f8bbd0;
+    cursor: pointer;
+    border: 2px solid #d81b60;
+}
+
+.slider:hover {
+    background-color: #a70641;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f8bbd0;
+    cursor: pointer;
+    border: 2px solid #d81b60;
+}
+
+.slider::-moz-range-track {
+    background: #d81b60;
+    height: 6px;
+    border-radius: 5px;
+}
+
+.slider::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f8bbd0;
+    cursor: pointer;
+    border: 2px solid #d81b60;
+}
+
+.slider::-ms-track {
+    background: #d81b60;
+    border-color: #d81b60;
+    color: #f8bbd0;
+    height: 6px;
+}
