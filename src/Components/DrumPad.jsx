@@ -36,7 +36,7 @@ const DrumPad = ({ keyTrigger, audioId, audioSrc, volume }) => {
     return (
         <button className='drum-pad' onClick={playSound} id={audioId} disabled={!checked}>
             <p>{keyTrigger}</p>
-            <audio ref={audioRef} src={audioSrc} className='clip' id={keyTrigger}>
+            <audio ref={audioRef} src={audioSrc} preload='auto' className='clip' id={keyTrigger}>
                 <track kind='captions'></track>
             </audio>
         </button>
